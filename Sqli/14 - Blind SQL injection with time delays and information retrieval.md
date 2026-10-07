@@ -57,11 +57,13 @@ jIPoq0qYcS0Y2AmF'+||+(SELECT+CASE+WHEN+(SUBSTRING((SELECT+password+FROM+users+WH
 The request can be sent to Intruder and tested against possible
 characters.
 
-**Pic 1**
+<img width="587" height="328" alt="1" src="https://github.com/user-attachments/assets/8deebabc-5de2-4f19-a13e-b665a684fa34" />
+
 
 The character that produces the noticeably longer response is `v`.
 
-**Pic 2**
+<img width="643" height="134" alt="2" src="https://github.com/user-attachments/assets/3a9c4a98-e1bd-4178-8da3-c7ce885943f1" />
+
 
 The same test is repeated for every password position until the complete
 password is obtained:
@@ -70,4 +72,5 @@ password is obtained:
 v06vaymszli7v131izpv
 ```
 
-**Pic 3**
+<img width="586" height="382" alt="3" src="https://github.com/user-attachments/assets/4aec60e7-2ca1-48be-9ec8-42ed884bfcf1" />
+
