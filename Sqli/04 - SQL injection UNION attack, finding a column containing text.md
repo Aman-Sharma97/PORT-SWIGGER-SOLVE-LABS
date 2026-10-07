@@ -18,7 +18,8 @@ https://portswigger.net/web-security/sql-injection/union-attacks
 The response displays two product values: the product name and the
 price.
 
-**Pic 1**
+<img width="686" height="246" alt="1" src="https://github.com/user-attachments/assets/b609b9aa-7b0b-429e-bdf4-d221b0a27dd4" />
+
 
 The following payloads confirm that the category filter can be modified
 and that all products can also be returned:
@@ -45,4 +46,6 @@ Here, the value `Qrc0Pq` is inserted into the second column:
 If the supplied string appears in the response, that column is
 compatible with string data.
 
-**Pic 2**
+<img width="589" height="402" alt="2" src="https://github.com/user-attachments/assets/1246dbbc-effb-498e-a6d6-a138c1f0d213" />
+
+
