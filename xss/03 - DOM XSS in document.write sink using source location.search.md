@@ -18,7 +18,8 @@ The search page accepts its query through the `/?search=` parameter:
 
 
 
-**Pic 1**
+<img width="727" height="232" alt="1" src="https://github.com/user-attachments/assets/7ba5b37e-1d56-4d2b-ae6f-d731edca6081" />
+
 
 The relevant source code shows the sink where the URL-controlled value is written:
 
@@ -34,7 +35,8 @@ if(query) {
 
 
 
-**Pic 2**
+<img width="649" height="136" alt="2" src="https://github.com/user-attachments/assets/add373a7-b0a5-4b88-bf4d-f10b2cef36e1" />
+
 
 The following payload triggers the alert in this lab:
 
@@ -45,4 +47,4 @@ The following payload triggers the alert in this lab:
 
 
 
-**Pic 3**
+<img width="713" height="214" alt="3" src="https://github.com/user-attachments/assets/fa680476-4d23-467c-bbc5-af754d75d1d9" />
