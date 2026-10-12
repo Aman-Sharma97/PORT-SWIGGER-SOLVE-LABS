@@ -15,11 +15,13 @@ There is a functionality to post comments in each blog post:
 
 
 
-**Pic 1**
+<img width="677" height="593" alt="1" src="https://github.com/user-attachments/assets/e36669b9-7793-4aaf-ab32-2b9540f98996" />
+
 
 
 Open the blog post again after submitting the comment. The stored input executes when the post is viewed, and the alert appears.
 
 
 
-**Pic 2**
+<img width="613" height="166" alt="2" src="https://github.com/user-attachments/assets/4ad89b35-20db-437f-b0aa-41fbcd5d3edd" />
+
