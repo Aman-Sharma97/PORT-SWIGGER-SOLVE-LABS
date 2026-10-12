@@ -17,8 +17,8 @@ References:
 The search page accepts its query through the `/?search=` parameter:
 
 
+<img width="719" height="215" alt="1" src="https://github.com/user-attachments/assets/c0d2f035-93d7-41aa-b20a-36b6b9f2a5df" />
 
-**Pic 1**
 
 
 The relevant source code shows the sink where the URL-controlled value is written:
@@ -35,7 +35,8 @@ if(query) {
 
 
 
-**Pic 2**
+<img width="648" height="152" alt="2" src="https://github.com/user-attachments/assets/e56fb10b-6d5a-4d3a-940a-4e31bb9aa6e7" />
+
 
 
 The `searchMessage` span is populated using the request's `search` GET parameter. Because that value is inserted as HTML, the following payload triggers the alert:
@@ -44,4 +45,5 @@ The `searchMessage` span is populated using the request's `search` GET parameter
 <img src=x onerror=alert(1) />
 ```
 
-**Pic 3**
+<img width="713" height="169" alt="3" src="https://github.com/user-attachments/assets/c95d63f6-2295-4dc4-b49b-cf446b7225a3" />
+
