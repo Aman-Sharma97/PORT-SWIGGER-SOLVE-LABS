@@ -17,7 +17,8 @@ The search term is reflected inside an `h1` HTML element:
 
 
 
-**Pic 1**
+<img width="262" height="62" alt="1" src="https://github.com/user-attachments/assets/3872242a-9206-43ee-b231-04b35c995029" />
+
 
 
 I used the following template payload for testing with Intruder:
@@ -30,20 +31,23 @@ I tested the candidate attributes first:
 
 
 
-**Pic 2**
+<img width="809" height="365" alt="2" src="https://github.com/user-attachments/assets/82ebb499-9616-4b14-a741-95d032049298" />
+
 
 The results indicate that the tested attributes are accepted:
 
 
 
-**Pic 3**
+<img width="503" height="126" alt="3" src="https://github.com/user-attachments/assets/d8197338-7c35-40c6-ae33-841941c373df" />
+
 
 
 Next, I tested which tags are accepted:
 
 
 
-**Pic 4**
+<img width="814" height="428" alt="4" src="https://github.com/user-attachments/assets/bc323fe2-d07a-4a65-8375-2567fade3101" />
+
 
 
 The following tag names passed the tests:
@@ -64,8 +68,7 @@ The following tag names passed the tests:
 • a2
 
 
-
-**Pic 5**
+<img width="503" height="351" alt="5" src="https://github.com/user-attachments/assets/e99940b9-8aba-44e8-8f1b-e780d1303be2" />
 
 
 One payload that triggers the alert is:
