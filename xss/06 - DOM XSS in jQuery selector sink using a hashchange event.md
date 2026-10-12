@@ -25,7 +25,8 @@ $(window).on('hashchange', function(){
 
 
 
-**Pic 1**
+<img width="815" height="90" alt="1" src="https://github.com/user-attachments/assets/238c4d14-7804-4502-a8b4-839dfafc592a" />
+
 
 To exploit it, it is possible to use the same payload as in https://portswigger.net/web-security/cross-site-scripting/dom-based:
 
@@ -35,4 +36,5 @@ To exploit it, it is possible to use the same payload as in https://portswigger.
 
 
 
-**Pic 2**
+<img width="1156" height="705" alt="2" src="https://github.com/user-attachments/assets/346c2e02-17af-40c3-ba4c-c1f8e92e7f5e" />
+
