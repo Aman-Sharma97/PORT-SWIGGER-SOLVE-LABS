@@ -35,14 +35,16 @@ document.write('</select>');
 
 
 
-**Pic 1**
+<img width="555" height="226" alt="1" src="https://github.com/user-attachments/assets/3341b578-48d7-4207-96dd-93c7daef4a48" />
+
 
 
 The `storeId` parameter is inserted between `<option selected>` and `</option>`. Supplying a value in the GET request therefore places it inside the option list, as illustrated by `/product?productId=4&storeId=1`:
 
 
 
-**Pic 2**
+<img width="465" height="137" alt="2" src="https://github.com/user-attachments/assets/1e1e6923-d5f0-4388-b987-5ae8d08c9e48" />
+
 
 
 To break out of the option element, use this payload:
@@ -57,4 +59,5 @@ To break out of the option element, use this payload:
 
 
 
-**Pic 3**
+<img width="716" height="210" alt="3" src="https://github.com/user-attachments/assets/37726e4c-ffee-4b25-9cb8-7d0440d9eb32" />
+
