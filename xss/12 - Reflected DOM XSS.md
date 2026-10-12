@@ -93,21 +93,21 @@ The unsafe insertion point is illustrated here:
 
 
 
-**Pic 1**
+<img width="470" height="130" alt="1" src="https://github.com/user-attachments/assets/f9cdcd3e-8972-43ee-b194-05f1c89056f4" />
 
 
 The page sends a request to `/search-results`.
 
 
+<img width="799" height="227" alt="2" src="https://github.com/user-attachments/assets/d10696d3-f069-4cd6-b8bf-5b02f624f1e9" />
 
-**Pic 2**
 
 
 The `/search-results` response is shown below:
 
 
+<img width="389" height="181" alt="3" src="https://github.com/user-attachments/assets/79e88ac8-4a83-497f-aeee-346a7a39e7a1" />
 
-**Pic 3**
 
 
 The solution uses this payload:
@@ -122,4 +122,5 @@ The solution uses this payload:
 
 
 
-**Pic 4**
+<img width="392" height="212" alt="4" src="https://github.com/user-attachments/assets/07e94131-c6fb-4f66-9b28-535de3c10324" />
+
