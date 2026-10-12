@@ -18,14 +18,16 @@ The vulnerable sink appears on the Submit Feedback page:
 
 
 
-**Pic 1**
+<img width="732" height="77" alt="1" src="https://github.com/user-attachments/assets/9b4b1fd7-702d-4090-a48e-40b190a820f1" />
+
 
 
 The Submit Feedback page uses this URL, including the `returnPath` parameter:
 
 
 
-**Pic 2**
+<img width="156" height="29" alt="2" src="https://github.com/user-attachments/assets/57971b8f-18df-4f94-a7bc-313fc84fd23e" />
+
 
 A JavaScript URL can be supplied through that parameter, for example:
 
@@ -36,4 +38,5 @@ A JavaScript URL can be supplied through that parameter, for example:
 
 
 
-**Pic 3**
+<img width="704" height="209" alt="3" src="https://github.com/user-attachments/assets/b2001495-8a56-4d68-91df-fff7d3dc169d" />
+
