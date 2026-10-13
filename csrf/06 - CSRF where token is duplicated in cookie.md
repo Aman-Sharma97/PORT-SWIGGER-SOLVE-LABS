@@ -17,28 +17,29 @@ References:
 
 
 
-**Pic 1**
+<img width="845" height="500" alt="1" src="https://github.com/user-attachments/assets/ed94223e-d806-42a5-b633-8d730b922ad3" />
+
 
 ---------------------------------------------
 
 The same CSRF token value appears in both the POST parameter and the `Cookie` HTTP header:
 
 
+<img width="518" height="452" alt="2" src="https://github.com/user-attachments/assets/20489e5a-5209-45bf-be99-3c3e23b3cf3a" />
 
-**Pic 2**
 
 The request is still accepted when a different test value is used:
 
 
+<img width="770" height="489" alt="3" src="https://github.com/user-attachments/assets/1cbe01f4-b929-4a82-b6b0-8b5fcb3081be" />
 
-**Pic 3**
 
 
 As in the previous lab, the search feature stores the most recent search term in `LastSearchTerm`:
 
 
 
-**Pic 4**
+<img width="722" height="316" alt="4" src="https://github.com/user-attachments/assets/78c9ddb9-5dd8-4262-98a8-415853ba0668" />
 
 
 The proof of concept from the previous lab can be adapted as follows:
