@@ -26,7 +26,8 @@ References:
 
 
 
-**Pic 1**
+<img width="857" height="777" alt="1" src="https://github.com/user-attachments/assets/13a3e3ed-b775-4c63-b609-8b3b3f266b75" />
+
 
 ---------------------------------------------
 
@@ -34,7 +35,8 @@ After changing the email to `test@test.com`, the browser contains two relevant c
 
 
 
-**Pic 2**
+<img width="773" height="319" alt="2" src="https://github.com/user-attachments/assets/78e4392b-6df3-4ab9-adb4-0d7b2580e08d" />
+
 
 
 The following cookie-setting function is taken from this reference: https://stackoverflow.com/questions/14573223/set-cookie-and-get-cookie-with-javascript
@@ -116,14 +118,16 @@ A further inspection shows that the search functionality adds a value to the HTT
 
 
 
-**Pic 3**
+<img width="715" height="167" alt="3" src="https://github.com/user-attachments/assets/11a29633-4555-42a1-b281-70e421da2117" />
+
 
 
 The added cookie value is named `LastSearchTerm`:
 
 
 
-**Pic 4**
+<img width="661" height="361" alt="4" src="https://github.com/user-attachments/assets/65bf2c29-dd6a-4960-a51c-3b10162c97f4" />
+
 
 
 The official solution uses the following payload:
@@ -157,4 +161,4 @@ The image element requests the crafted URL; its error handler then submits the f
 
 
 
-**Pic 5**
+<img width="725" height="375" alt="5" src="https://github.com/user-attachments/assets/a97d24df-e86c-4150-967f-aaa14cb9c5c7" />
