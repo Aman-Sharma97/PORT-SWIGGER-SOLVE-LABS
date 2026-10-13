@@ -18,7 +18,8 @@ References:
 
 
 
-**Pic 1**
+<img width="849" height="674" alt="1" src="https://github.com/user-attachments/assets/2e67b11c-eca2-44a1-b518-3d6f98ef00f7" />
+
 
 ---------------------------------------------
 
@@ -26,13 +27,15 @@ Because Chrome applies Lax restrictions by default, the test looks for a way to 
 
 
 
-**Pic 2**
+<img width="738" height="483" alt="2" src="https://github.com/user-attachments/assets/483f1624-e9ab-4773-916a-65e9dc44508f" />
+
 
 
 The request still succeeds after switching to GET and adding the `_method` parameter:
 
 
-**Pic 3**
+<img width="739" height="469" alt="3" src="https://github.com/user-attachments/assets/c522baf8-6cb7-4353-bf14-9f390074d6dc" />
+
 
 Use the following payload for the next step:
 
