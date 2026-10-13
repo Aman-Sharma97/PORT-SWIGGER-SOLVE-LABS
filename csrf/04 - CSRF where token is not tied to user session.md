@@ -18,14 +18,16 @@ References:
 
 - https://portswigger.net/web-security/csrf/bypassing-token-validation
 
-**Pic 1**
+<img width="844" height="190" alt="1" src="https://github.com/user-attachments/assets/d1ef767b-df56-4a24-bd44-ca5502701764" />
+
 
 ---------------------------------------------
 
 
 The standard email-change POST request includes a `csrf` parameter. I created the PoC first, then intercepted and dropped the request to test the flow without using that token:
 
-**Pic 2**
+<img width="774" height="323" alt="2" src="https://github.com/user-attachments/assets/73a9f25a-177f-491a-a722-0d6cdad397ed" />
+
 
 
 Use **Engagement tools → Generate CSRF PoC** in Burp Suite to generate the HTML PoC:
