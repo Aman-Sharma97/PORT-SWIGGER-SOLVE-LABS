@@ -17,7 +17,8 @@ References:
 
 
 
-**Pic 1**
+<img width="849" height="566" alt="1" src="https://github.com/user-attachments/assets/0f20045a-4e10-4475-92d6-9f50db8e4dca" />
+
 
 ---------------------------------------------
 
@@ -25,14 +26,16 @@ The account page provides an email-update feature:
 
 
 
-**Pic 2**
+<img width="711" height="288" alt="2" src="https://github.com/user-attachments/assets/627ea3d8-caee-42c1-a0d7-9147e31a6b22" />
+
 
 
 The email-change operation is sent as a POST request:
 
 
 
-**Pic 3**
+<img width="642" height="379" alt="3" src="https://github.com/user-attachments/assets/e66b2571-8d1f-4484-88b5-9f5bcface1a4" />
+
 
 
 The CSRF proof of concept is shown below:
@@ -57,14 +60,16 @@ Opening the PoC produces the following error:
 
 
 
-**Pic 4**
+<img width="358" height="91" alt="4" src="https://github.com/user-attachments/assets/098493c3-1bce-4b49-b44e-5efdb5268df0" />
+
 
 
 The error occurs because the `Referer` HTTP header includes the exploit server's domain:
 
 
 
-**Pic 5**
+<img width="639" height="366" alt="5" src="https://github.com/user-attachments/assets/a416663e-7cc2-4a79-beb1-b431f843af11" />
+
 
 
 
@@ -76,7 +81,8 @@ http://attacker-website.com/csrf-attack?0a2c007d0457217b8686cbaf0006004c.web-sec
 
 
 
-**Pic 6**
+<img width="929" height="358" alt="6" src="https://github.com/user-attachments/assets/7e3b8ca8-35f8-4c29-a382-a12f741dce08" />
+
 
 
 
@@ -100,7 +106,8 @@ Update `history.pushState` in the PoC so the URL contains the vulnerable domain 
 
 
 
-**Pic 7**
+<img width="645" height="374" alt="7" src="https://github.com/user-attachments/assets/99f56ee9-d835-4768-a369-0bfc3e9e046b" />
+
 
 
 The page also needs a `Referrer-Policy` value of `unsafe-url` in its head so the full URL is sent in the `Referer` header:
@@ -109,4 +116,5 @@ The page also needs a `Referrer-Policy` value of `unsafe-url` in its head so the
 Referrer-Policy: unsafe-url
 ```
 
-**Pic 8**
+<img width="895" height="688" alt="8" src="https://github.com/user-attachments/assets/2c6e4d2b-f72f-4ede-bcf5-179b5ff577d8" />
+
