@@ -18,8 +18,7 @@ References:
 - https://portswigger.net/web-security/websockets/cross-site-websocket-hijacking
 
 
-
-**Pic 1**
+<img width="818" height="299" alt="1" src="https://github.com/user-attachments/assets/693370ca-619b-4e2a-abc0-3ad2168eafad" />
 
 ---------------------------------------------
 
@@ -41,15 +40,16 @@ The completed Cross-site WebSocket hijacking lab in the WebSockets section provi
 The browser establishes a WebSocket connection, as shown here:
 
 
+<img width="984" height="515" alt="2" src="https://github.com/user-attachments/assets/f54cc0f0-6e83-42ca-a1ac-b215c594ef5d" />
 
-**Pic 2**
 
 
 The chat-message handling logic can be examined in `/resources/js/chat.js`:
 
 
 
-**Pic 3**
+<img width="419" height="206" alt="3" src="https://github.com/user-attachments/assets/270d0b45-e3e1-4fea-a498-7e0d45423207" />
+
 
 The message encoder replaces the following characters when sending chat content:
 
@@ -61,8 +61,10 @@ The message encoder replaces the following characters when sending chat content:
 
 
 
-**Pic 4**
-**Pic 5**
+<img width="520" height="282" alt="4" src="https://github.com/user-attachments/assets/47b52284-6c1f-428e-a890-487965fb12e2" />
+
+<img width="502" height="71" alt="5" src="https://github.com/user-attachments/assets/1c1a5897-2453-4848-ace5-9972a5740ace" />
+
 
 
 ```
@@ -148,14 +150,16 @@ The response header `Access-Control-Allow-Origin` reveals a sibling subdomain na
 
 
 
-**Pic 6**
+<img width="579" height="194" alt="6" src="https://github.com/user-attachments/assets/83d0d740-269b-4e00-ae4f-3603ea308a5f" />
+
 
 
 The sibling subdomain contains a login function that reflects the submitted username:
 
 
 
-**Pic 7**
+<img width="612" height="167" alt="7" src="https://github.com/user-attachments/assets/12919d7d-b3b0-433f-9546-e50eeb75be2d" />
+
 
 
 Entering an XSS test string in the username field demonstrates that the input is reflected unsafely:
@@ -166,14 +170,16 @@ Entering an XSS test string in the username field demonstrates that the input is
 
 
 
-**Pic 8**
+<img width="680" height="207" alt="8" src="https://github.com/user-attachments/assets/afe9b99a-f2e3-4bcc-8146-bdf621ca9f43" />
+
 
 
 Although the login request uses POST, the same endpoint can be tested with GET:
 
 
 
-**Pic 9**
+<img width="810" height="321" alt="9" src="https://github.com/user-attachments/assets/f5bd7572-9344-467e-8a2c-8fea54f2a039" />
+
 
 
 "As this sibling domain is part of the same site, you can use this XSS to launch the CSWSH attack without it being mitigated by SameSite restrictions"
@@ -204,7 +210,8 @@ Place the encoded payload in the username field as shown below:
 
 
 
-**Pic 10**
+<img width="853" height="487" alt="10" src="https://github.com/user-attachments/assets/b4cb1e77-4524-4441-890b-6004431728fc" />
+
 
 
 Login with credentials carlos:565vmsewc7e8c05o7jf4
