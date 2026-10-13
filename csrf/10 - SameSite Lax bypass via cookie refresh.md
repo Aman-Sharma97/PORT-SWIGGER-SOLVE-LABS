@@ -28,7 +28,8 @@ References:
 
 
 
-**Pic 1**
+<img width="847" height="901" alt="1" src="https://github.com/user-attachments/assets/0fd129ef-c442-41c2-9018-7865b0a46687" />
+
 
 ---------------------------------------------
 
@@ -36,28 +37,32 @@ The page contains a function for updating the email address:
 
 
 
-**Pic 2**
+<img width="715" height="316" alt="2" src="https://github.com/user-attachments/assets/84d5856c-1894-4261-b037-1aadcdf7d260" />
+
 
 
 The email-change operation is sent as a POST request:
 
 
 
-**Pic 3**
+<img width="715" height="379" alt="3" src="https://github.com/user-attachments/assets/bb830a19-814f-4fba-9302-83db907522f0" />
+
 
 
 Unlike the earlier examples, changing this request to GET does not work:
 
 
 
-**Pic 4**
+<img width="762" height="470" alt="4" src="https://github.com/user-attachments/assets/5397149e-c8ed-4c42-801d-2606be313cf4" />
+
 
 
 During login, the browser is redirected to the `oauth` subdomain:
 
 
 
-**Pic 5**
+<img width="703" height="470" alt="5" src="https://github.com/user-attachments/assets/32d3bd31-978c-4461-9e19-f2bb71c529e8" />
+
 
 
 The redirect uses a URL with parameters similar to the following:
@@ -70,7 +75,8 @@ The request requires parameters such as `client_id`; without them, it fails:
 
 
 
-**Pic 6**
+<img width="393" height="221" alt="6" src="https://github.com/user-attachments/assets/6bdd3b52-629f-481f-84a8-7841b55efab7" />
+
 
 
 PortSwigger notes that completing an OAuth-based login flow can create a new session because the OAuth service may not know whether the user remains logged in to the target site. The challenge is therefore to invoke the OAuth flow without knowing the victim's `client_id`.
@@ -81,8 +87,10 @@ Reviewing the requests shows that visiting `/social-login` while already logged 
 
 
 
-**Pic 7**
-**Pic 8**
+<img width="460" height="104" alt="7" src="https://github.com/user-attachments/assets/8c3110f8-2ef9-48da-9e34-76a2c7a75518" />
+
+<img width="458" height="104" alt="8" src="https://github.com/user-attachments/assets/56ca3889-9f9a-4de5-adf1-a4c39944bb43" />
+
 
 
 Start with Burp's PoC for the email-change POST request. Add a click handler that opens `/social-login`, waits 10 seconds, and then submits the form:
