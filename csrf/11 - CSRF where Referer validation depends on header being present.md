@@ -17,7 +17,8 @@ References:
 
 
 
-**Pic 1**
+<img width="852" height="241" alt="1" src="https://github.com/user-attachments/assets/c69622a9-4d74-455e-8433-8f1379c7055a" />
+
 
 ---------------------------------------------
 
@@ -25,14 +26,16 @@ The account page provides an email-update feature:
 
 
 
-**Pic 2**
+<img width="715" height="290" alt="2" src="https://github.com/user-attachments/assets/6ccdfb62-5812-4adc-a690-8d51c7d8e503" />
+
 
 
 The POST request also includes a `Referer` HTTP header:
 
 
 
-**Pic 3**
+<img width="641" height="378" alt="3" src="https://github.com/user-attachments/assets/4fbd8cf8-2e50-4122-b6c0-c0a6925c36c6" />
+
 
 
 First, generate a CSRF proof of concept:
@@ -58,7 +61,8 @@ Opening the PoC produces the following error:
 
 
 
-**Pic 4**
+<img width="368" height="94" alt="4" src="https://github.com/user-attachments/assets/439e07ac-6131-4ddb-8c4c-8d618b4ead11" />
+
 
 
 The next version adds a referrer directive intended to omit the `Referer` header:
@@ -86,4 +90,5 @@ The next version adds a referrer directive intended to omit the `Referer` header
 
 
 
-**Pic 5**
+<img width="642" height="333" alt="5" src="https://github.com/user-attachments/assets/94098d8c-295c-48d1-88c1-606531e7000a" />
+
