@@ -17,7 +17,8 @@ References:
 
 
 
-**Pic 1**
+<img width="851" height="331" alt="1" src="https://github.com/user-attachments/assets/b6a95fdf-43c5-48b7-a082-36d562800f1d" />
+
 
 ---------------------------------------------
 
@@ -25,7 +26,8 @@ The normal email-change POST request includes a `csrf` parameter. However, the r
 
 
 
-**Pic 2**
+<img width="742" height="477" alt="2" src="https://github.com/user-attachments/assets/3ce3fa60-a2a7-40c9-b005-d5d1fdda87e4" />
+
 
 
 Use **Engagement tools → Generate CSRF PoC** in Burp Suite to generate the HTML PoC:
