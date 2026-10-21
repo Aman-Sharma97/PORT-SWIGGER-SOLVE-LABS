@@ -11,13 +11,15 @@ The app rejects any input containing traversal sequences, but then goes on to UR
 **Reference:**
 - https://portswigger.net/web-security/file-path-traversal
 
-pic 1
+<img width="767" height="291" alt="1" src="https://github.com/user-attachments/assets/5af2f5d0-23d4-413d-ba4d-46368838c3af" />
+
 
 ---
 
 Images are fetched using a GET request that takes a `filename` parameter:
 
-pic 2
+<img width="789" height="370" alt="2" src="https://github.com/user-attachments/assets/f85cee60-c844-488c-a228-c7bf58f9404a" />
+
 
 To pull `/etc/passwd`, the traversal characters need to be double URL-encoded:
 
@@ -25,4 +27,5 @@ To pull `/etc/passwd`, the traversal characters need to be double URL-encoded:
 GET /image?filename=%252e%252e%252f%252e%252e%252f%252e%252e%252fetc/passwd
 ```
 
-pic 3
+<img width="791" height="400" alt="3" src="https://github.com/user-attachments/assets/2cfff111-4221-411f-9be4-cf2ba52123a7" />
+
