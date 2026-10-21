@@ -11,13 +11,15 @@ Here, traversal sequences (like `../`) are filtered out, but the app still treat
 **Reference:**
 - https://portswigger.net/web-security/file-path-traversal
 
-pic 1
+<img width="757" height="222" alt="1" src="https://github.com/user-attachments/assets/320e692d-0c58-41a5-a2ef-43fa80c79ab1" />
+
 
 ---
 
 Images are fetched using a GET request that takes a `filename` parameter:
 
-pic 2
+<img width="889" height="302" alt="2" src="https://github.com/user-attachments/assets/bccae126-ee5e-4415-86b4-813dbd49c154" />
+
 
 To pull `/etc/passwd`:
 
@@ -25,4 +27,5 @@ To pull `/etc/passwd`:
 GET /image?filename=/etc/passwd 
 ```
 
-pic 3
+<img width="1032" height="308" alt="3" src="https://github.com/user-attachments/assets/aaf5aafa-3449-41cd-8604-808c385b892b" />
+
