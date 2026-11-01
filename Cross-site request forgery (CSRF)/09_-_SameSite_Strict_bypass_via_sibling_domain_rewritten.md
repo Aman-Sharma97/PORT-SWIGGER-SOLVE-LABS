@@ -14,7 +14,8 @@ Hint: Thoroughly map out all available attack surface. Watch for extra vulnerabi
 - https://portswigger.net/web-security/csrf/bypassing-samesite-restrictions
 - https://portswigger.net/web-security/websockets/cross-site-websocket-hijacking
 
-pic 1
+<img width="818" height="299" alt="1" src="https://github.com/user-attachments/assets/5a8ca32f-2b84-4f96-82a1-5cb14cc8c22b" />
+
 
 ---
 
@@ -34,18 +35,22 @@ From the earlier "Cross-site WebSocket hijacking" lab in the WebSockets section,
 
 A connection is established successfully:
 
-pic 2
+<img width="984" height="515" alt="2" src="https://github.com/user-attachments/assets/548eb6c2-0a11-42f2-bf0c-d9cf20888276" />
+
 
 Examining the chat-writing logic in `/resources/js/chat.js` shows which characters get escaped when sending a message:
 
-pic 3
+<img width="419" height="206" alt="3" src="https://github.com/user-attachments/assets/dd08a9db-f76c-432b-82f9-296ee0512bde" />
+
 
 ```
 ' " < > & \r \n \\
 ```
 
-pic 4
-pic 5
+<img width="520" height="282" alt="4" src="https://github.com/user-attachments/assets/30636db4-78f6-4475-83ec-a4a4011be244" />
+
+<img width="502" height="71" alt="5" src="https://github.com/user-attachments/assets/45929fdc-2e13-43dd-ba49-931ac3e35193" />
+
 
 ```
 (function () {
@@ -127,11 +132,13 @@ pic 5
 
 Fetching this file reveals a `cms` subdomain mentioned in the response's `Access-Control-Allow-Origin` header:
 
-pic 6
+<img width="579" height="194" alt="6" src="https://github.com/user-attachments/assets/df5708df-c4e6-4dd8-9ae5-f98ea476a33a" />
+
 
 That subdomain has its own login function, which reflects back whatever username is submitted:
 
-pic 7
+<img width="612" height="167" alt="7" src="https://github.com/user-attachments/assets/03580319-f840-42c2-b6b0-c9b82636fdf9" />
+
 
 Submitting an XSS payload in the username field confirms the injection works:
 
@@ -139,11 +146,13 @@ Submitting an XSS payload in the username field confirms the injection works:
 <script>alert(1)</script>
 ```
 
-pic 8
+<img width="680" height="207" alt="8" src="https://github.com/user-attachments/assets/a2c7e2d5-1b52-40b6-a812-8d5ded1df8dd" />
+
 
 This login endpoint is also a POST request by default, but it can be switched to GET:
 
-pic 9
+<img width="810" height="321" alt="9" src="https://github.com/user-attachments/assets/5243de94-3131-42e0-a36f-8a52ab30bc7f" />
+
 
 Since this sibling subdomain is considered part of the same "site," the reflected XSS on it can be used to run the CSWSH attack without SameSite protections getting in the way:
 
@@ -167,6 +176,7 @@ That encoded payload is placed into the username field of the sibling-domain red
 </script>
 ```
 
-pic 10
+<img width="853" height="487" alt="10" src="https://github.com/user-attachments/assets/435316b8-05a8-4226-ad11-416d7a2a0474" />
+
 
 Final login recovered: carlos:565vmsewc7e8c05o7jf4
