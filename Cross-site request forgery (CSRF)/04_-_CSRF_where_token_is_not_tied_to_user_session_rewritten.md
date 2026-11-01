@@ -16,13 +16,15 @@ Hint: Registering an email already used by someone else isn't allowed. If you te
 **Reference:**
 - https://portswigger.net/web-security/csrf/bypassing-token-validation
 
-pic 1
+<img width="844" height="190" alt="1" src="https://github.com/user-attachments/assets/75e2bbbc-5e23-400e-9af9-dfa2082aa93c" />
+
 
 ---
 
 The normal POST request to update the email includes a "csrf" parameter. I intercepted and dropped the request so the token itself wasn't actually used — but before doing that, I had already generated the CSRF PoC:
 
-pic 2
+<img width="774" height="323" alt="2" src="https://github.com/user-attachments/assets/34cef166-7e31-4ee0-91d5-abf171aad291" />
+
 
 Using "Engagement tools" → "Generate CSRF PoC" produces this HTML:
 
