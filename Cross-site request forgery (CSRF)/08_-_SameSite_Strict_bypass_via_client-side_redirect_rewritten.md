@@ -11,22 +11,27 @@ Hint: Registering an email already used by someone else isn't allowed. If you te
 **Reference:**
 - https://portswigger.net/web-security/csrf/bypassing-samesite-restrictions
 
-pic 1
+<img width="844" height="501" alt="1" src="https://github.com/user-attachments/assets/d442b41d-911d-45e7-8919-fc7d1d1ceb47" />
+
 
 ---
 
 There's a POST request that updates the email address:
 
-pic 2
+<img width="773" height="345" alt="2" src="https://github.com/user-attachments/assets/32bdf7c8-3fed-4a93-8f49-5274153e0b8f" />
+
 
 It's also possible to switch the method to GET and have it still succeed:
 
-pic 3
+<img width="740" height="461" alt="3" src="https://github.com/user-attachments/assets/5e5ee0d0-c31f-4749-be77-3bc73602e78d" />
+
 
 After posting a blog comment, the page redirects to `/post`:
 
-pic 4
-pic 5
+<img width="282" height="46" alt="4" src="https://github.com/user-attachments/assets/7b41652e-b265-4948-a4ec-a8cf1eb100c7" />
+
+<img width="684" height="126" alt="5" src="https://github.com/user-attachments/assets/f8c621d4-37c7-4a5c-8690-0e0ad51956c3" />
+
 
 Digging into the source, the redirect logic lives in a script at `/resources/js/commentConfirmationRedirect.js`:
 
@@ -40,7 +45,8 @@ redirectOnConfirmation = (blogPath) => {
 }
 ```
 
-pic 6
+<img width="391" height="117" alt="6" src="https://github.com/user-attachments/assets/02fb2e44-7e1f-467b-a9d2-b0e170644d9d" />
+
 
 This redirect is driven by requests to `/post/comment/confirmation?postId=a`. By manipulating the `postId` parameter, we can try to redirect somewhere like:
 
@@ -56,7 +62,8 @@ So the attempt becomes:
 
 This redirects properly, but the `submit` parameter doesn't actually get passed along:
 
-pic 7
+<img width="1031" height="132" alt="7" src="https://github.com/user-attachments/assets/ff61b5a9-e0dd-4f20-b9fe-61f7a0c56650" />
+
 
 Replacing `&` with its URL-encoded form `%26` fixes that:
 
@@ -66,7 +73,8 @@ Replacing `&` with its URL-encoded form `%26` fixes that:
 
 This version works as expected:
 
-pic 8
+<img width="240" height="135" alt="8" src="https://github.com/user-attachments/assets/f7255127-2b06-4c4b-8ea6-737ce202081e" />
+
 
 Final payload:
 
