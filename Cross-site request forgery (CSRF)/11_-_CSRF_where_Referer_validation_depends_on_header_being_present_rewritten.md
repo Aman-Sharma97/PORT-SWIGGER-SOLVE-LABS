@@ -13,17 +13,20 @@ Hint: Registering an email already used by someone else isn't allowed. If you te
 **Reference:**
 - https://portswigger.net/web-security/csrf/bypassing-referer-based-defenses
 
-pic 1
+<img width="852" height="241" alt="1" src="https://github.com/user-attachments/assets/335a09f0-32a8-4ca5-bc7b-74e47ffc5d6e" />
+
 
 ---
 
 There's a function for updating the email:
 
-pic 2
+<img width="715" height="290" alt="2" src="https://github.com/user-attachments/assets/50180ec1-79c6-446e-901a-38d8a98df662" />
+
 
 It's a POST request that includes a `Referer` HTTP header:
 
-pic 3
+<img width="641" height="378" alt="3" src="https://github.com/user-attachments/assets/47b0b1c3-ef81-4fc0-9dbe-e3214e6c9f27" />
+
 
 First, the CSRF PoC is generated:
 
@@ -45,7 +48,8 @@ First, the CSRF PoC is generated:
 
 Running this triggers an error:
 
-pic 4
+<img width="368" height="94" alt="4" src="https://github.com/user-attachments/assets/92ae73cb-950d-4c1e-a912-aee23e60087f" />
+
 
 Suppressing the `Referer` header entirely resolves the issue:
 
@@ -70,4 +74,5 @@ Suppressing the `Referer` header entirely resolves the issue:
 </html>
 ```
 
-pic 5
+<img width="642" height="333" alt="5" src="https://github.com/user-attachments/assets/b28a8d2b-b1e6-4dc5-90f7-897e255e77c6" />
+
