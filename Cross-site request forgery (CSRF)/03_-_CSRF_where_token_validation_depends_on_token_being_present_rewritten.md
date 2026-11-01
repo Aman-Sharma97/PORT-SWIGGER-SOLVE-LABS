@@ -13,13 +13,15 @@ Hint: Registering an email already used by someone else isn't allowed. If you te
 **Reference:**
 - https://portswigger.net/web-security/csrf/bypassing-token-validation
 
-pic 1
+<img width="851" height="331" alt="1" src="https://github.com/user-attachments/assets/7466e98c-996c-46dd-87c3-0ef5719ed765" />
+
 
 ---
 
 The normal POST request to change the email includes a "csrf" parameter — but it turns out the request still succeeds if that parameter is dropped entirely and only the email is sent:
 
-pic 1
+<img width="742" height="477" alt="2" src="https://github.com/user-attachments/assets/78dc7cbc-bd2f-4b1d-97d1-ff6ed1e6b395" />
+
 
 Using Burp's "Engagement tools" → "Generate CSRF PoC" produces this HTML:
 
