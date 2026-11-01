@@ -13,17 +13,20 @@ Hint: Registering an email already used by someone else isn't allowed. If you te
 **Reference:**
 - https://portswigger.net/web-security/csrf/bypassing-referer-based-defenses
 
-pic 1
+<img width="849" height="566" alt="1" src="https://github.com/user-attachments/assets/009cb2b1-fdfe-4bdb-9d54-6641d57eb77b" />
+
 
 ---
 
 There's a function for updating the email:
 
-pic 2
+<img width="711" height="288" alt="2" src="https://github.com/user-attachments/assets/803e92b4-503d-478c-9eaa-874d9875cd3d" />
+
 
 It's a POST request:
 
-pic 3
+<img width="642" height="379" alt="3" src="https://github.com/user-attachments/assets/a5d83200-45ac-4814-8463-30f4f95dce69" />
+
 
 This is the generated CSRF PoC:
 
@@ -45,11 +48,13 @@ This is the generated CSRF PoC:
 
 Running this triggers an error:
 
-pic 4
+<img width="358" height="91" alt="4" src="https://github.com/user-attachments/assets/d3587159-135c-4663-9864-b2bc602cd248" />
+
 
 That's because the `Referer` header carries the exploit server's own domain:
 
-pic 5
+<img width="639" height="366" alt="5" src="https://github.com/user-attachments/assets/59b9d139-3922-4631-92e4-3a8291ccd4f9" />
+
 
 But the check turns out to just look for the target domain appearing anywhere in the `Referer` value — so it can be anything, as long as that domain string is embedded somewhere in it:
 
@@ -57,7 +62,8 @@ But the check turns out to just look for the target domain appearing anywhere in
 http://attacker-website.com/csrf-attack?0a2c007d0457217b8686cbaf0006004c.web-security-academy.net/
 ```
 
-pic 6
+<img width="929" height="358" alt="6" src="https://github.com/user-attachments/assets/e7da6aa4-1048-4316-8cfd-884fd7d5a58a" />
+
 
 The `history.pushState` call in the PoC needs updating so the vulnerable domain appears as a query parameter in the URL:
 
@@ -77,7 +83,8 @@ The `history.pushState` call in the PoC needs updating so the vulnerable domain 
 </html>
 ```
 
-pic 7
+<img width="645" height="374" alt="7" src="https://github.com/user-attachments/assets/a345f763-061f-4216-a528-999174e28ec7" />
+
 
 It's also necessary to set a `Referrer-Policy` of `unsafe-url` in the page head, so the full URL gets sent in the `Referer` header rather than a trimmed version:
 
@@ -85,4 +92,5 @@ It's also necessary to set a `Referrer-Policy` of `unsafe-url` in the page head,
 Referrer-Policy: unsafe-url
 ```
 
-pic 8
+<img width="895" height="688" alt="8" src="https://github.com/user-attachments/assets/bdd0adbb-afd4-40c4-8a0b-0f230690321a" />
+
