@@ -13,17 +13,20 @@ Hint: Registering an email already used by someone else isn't allowed. If you te
 **Reference:**
 - https://portswigger.net/web-security/csrf/bypassing-samesite-restrictions
 
-pic 1
+<img width="849" height="674" alt="1" src="https://github.com/user-attachments/assets/ea407ad1-72db-4e20-ac36-820194cdb866" />
+
 
 ---
 
 Chrome applies Lax restrictions by default, so cross-site POST requests carrying cookies get blocked — meaning we need to find a way to trigger the email change via a GET request instead, since the default implementation uses POST:
 
-pic 2
+<img width="738" height="483" alt="2" src="https://github.com/user-attachments/assets/531fb6f5-a194-4602-8eb9-1d50662258c2" />
+
 
 Switching the method to GET and adding a `_method` parameter turns out to still work:
 
-pic 3
+<img width="739" height="469" alt="3" src="https://github.com/user-attachments/assets/9bd43db7-72c3-4f8a-8e4f-bd0ff7ab8961" />
+
 
 Final payload:
 
