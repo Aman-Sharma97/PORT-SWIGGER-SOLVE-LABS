@@ -23,25 +23,30 @@ Browsers typically block popups unless they're triggered by a genuine user actio
 **Reference:**
 - https://portswigger.net/web-security/csrf/bypassing-samesite-restrictions
 
-pic 1
+<img width="847" height="901" alt="1" src="https://github.com/user-attachments/assets/0b61f7fe-79f0-4080-bbce-30364170302f" />
+
 
 ---
 
 There's a function for updating the email:
 
-pic 2
+<img width="715" height="316" alt="2" src="https://github.com/user-attachments/assets/7a2c772c-977b-4675-acb4-7ddd2297955b" />
+
 
 It's a POST request:
 
-pic 3
+<img width="715" height="379" alt="3" src="https://github.com/user-attachments/assets/96859474-048d-40a0-80e6-bb3c6482e734" />
+
 
 Switching it to GET doesn't work here:
 
-pic 4
+<img width="762" height="470" alt="4" src="https://github.com/user-attachments/assets/b6bb4b18-cb47-4811-959d-690eaf5a54cb" />
+
 
 Logging in redirects through an "oauth" subdomain:
 
-pic 5
+<img width="703" height="470" alt="5" src="https://github.com/user-attachments/assets/2604821b-9a4d-4da8-939e-b0af35deb801" />
+
 
 The redirect URL looks like this:
 
@@ -51,14 +56,17 @@ https://oauth-0a6f009504061a2780d1702b026c00f7.oauth-server.net/auth?client_id=e
 
 Hitting this directly fails without the right parameters, such as `client_id`:
 
-pic 6
+<img width="393" height="221" alt="6" src="https://github.com/user-attachments/assets/26d66cf4-1e32-4d07-a94a-4c40f9cce593" />
+
 
 PortSwigger's documentation notes that completing an OAuth login flow can generate a fresh session every time, since the OAuth provider has no way of knowing whether the user is already authenticated on the target site. So the challenge is finding a way to trigger this OAuth flow without knowing the victim's `client_id`.
 
 Looking closer at the requests, it turns out that visiting `/social-login` while already logged in generates a brand-new session:
 
-pic 7
-pic 8
+<img width="460" height="104" alt="7" src="https://github.com/user-attachments/assets/2fbe72b5-3347-441d-88f5-b57266043692" />
+
+<img width="458" height="104" alt="8" src="https://github.com/user-attachments/assets/03cc6111-0361-423c-83ef-1b1e101ea24d" />
+
 
 Taking the PoC Burp generated for the email-update POST request, I added logic so that clicking triggers a visit to `/social-login`, waits 10 seconds, and then submits the form:
 
