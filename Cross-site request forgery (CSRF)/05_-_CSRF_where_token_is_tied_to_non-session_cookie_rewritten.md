@@ -19,13 +19,15 @@ Hint: Registering an email already used by someone else isn't allowed. If you te
 - https://learn.microsoft.com/en-us/troubleshoot/developer/webapps/iis/active-server-pages/xmlhttprequest-setrequestheader-method-cookies
 - https://stackoverflow.com/questions/9713058/send-post-data-using-xmlhttprequest
 
-pic 1
+<img width="857" height="777" alt="1" src="https://github.com/user-attachments/assets/fe8c7cda-2b9d-4c09-8541-9d40f6a68e31" />
+
 
 ---
 
 Changing the email to test@test.com reveals two separate cookies: one named "session" and another named "csrfKey":
 
-pic 2
+<img width="773" height="319" alt="2" src="https://github.com/user-attachments/assets/e3c12204-084b-451f-9116-93412429bd68" />
+
 
 I found a snippet for setting a browser cookie via JS (source: https://stackoverflow.com/questions/14573223/set-cookie-and-get-cookie-with-javascript):
 
@@ -103,11 +105,13 @@ This also fails.
 
 Looking at the application again, the search function turns out to set a value in the Cookie HTTP header:
 
-pic 3
+<img width="715" height="167" alt="3" src="https://github.com/user-attachments/assets/57b51589-446c-4fc5-9733-cae11decc07e" />
+
 
 It gets stored as `LastSearchTerm`:
 
-pic 4
+<img width="661" height="361" alt="4" src="https://github.com/user-attachments/assets/f8b6033d-e3ad-483c-82db-1f3cb657ac79" />
+
 
 Based on the official write-up, the following payload is needed:
 
@@ -137,4 +141,5 @@ An `img` element is used to trigger the malicious URL, and its `onerror` handler
 </html>
 ```
 
-pic 5
+<img width="725" height="375" alt="5" src="https://github.com/user-attachments/assets/4f458d83-64c7-4138-87d9-5a6171b729a5" />
+
