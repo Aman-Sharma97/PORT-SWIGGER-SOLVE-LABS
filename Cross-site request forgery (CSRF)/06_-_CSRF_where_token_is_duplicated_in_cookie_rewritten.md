@@ -13,21 +13,25 @@ Hint: Registering an email already used by someone else isn't allowed. If you te
 **Reference:**
 - https://portswigger.net/web-security/csrf/bypassing-token-validation
 
-pic 1
+<img width="845" height="500" alt="1" src="https://github.com/user-attachments/assets/3908f528-f47a-46d9-9ba1-e5a7395f6775" />
+
 
 ---
 
 The CSRF token shows up both as a POST parameter and inside the Cookie HTTP header, carrying the same value:
 
-pic 2
+<img width="518" height="452" alt="2" src="https://github.com/user-attachments/assets/5527b616-8498-424a-8f85-3153dedc4463" />
+
 
 Swapping in an arbitrary value for both still succeeds:
 
-pic 3
+<img width="770" height="489" alt="3" src="https://github.com/user-attachments/assets/b0d99cf5-7755-4bf7-acfd-fd4589fe3097" />
+
 
 As in the previous lab, the search function sets the last searched term via a `LastSearchTerm` cookie value:
 
-pic 4
+<img width="722" height="316" alt="4" src="https://github.com/user-attachments/assets/1268935e-ccc2-4fbc-844f-12ead1f3f742" />
+
 
 Reusing and adapting the previous lab's PoC:
 
