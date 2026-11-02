@@ -8,9 +8,7 @@ Hint: Try to solve this one using only the official documentation. If you're rea
 
 ---
 
-**References:**
-- https://portswigger.net/web-security/server-side-template-injection/exploiting
-- https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection#freemarker
+
 
 <img width="774" height="409" alt="1" src="https://github.com/user-attachments/assets/ad5c0d0e-b453-409a-91ae-f52b338dca3d" />
 
