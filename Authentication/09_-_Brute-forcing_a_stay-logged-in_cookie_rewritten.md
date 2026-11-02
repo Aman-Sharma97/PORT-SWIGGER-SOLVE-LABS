@@ -13,25 +13,30 @@ This lab lets users remain logged in after closing their browser, via a persiste
 **Reference:**
 - https://portswigger.net/web-security/authentication/other-mechanisms
 
-pic 1
+<img width="768" height="482" alt="1" src="https://github.com/user-attachments/assets/d3e8243d-1a68-4e79-ade2-31d8b258f6ce" />
+
 
 ---
 
 There's a "stay logged in" option available:
 
-pic 2
+<img width="717" height="370" alt="2" src="https://github.com/user-attachments/assets/16dcedc4-e17f-47af-99b9-2e633e3dc937" />
+
 
 Enabling it sets a `stay-logged-in` cookie:
 
-pic 3
+<img width="762" height="165" alt="3" src="https://github.com/user-attachments/assets/22b61456-4958-4422-90ba-fe682b694976" />
+
 
 Decoding that cookie's value reveals it's the Base64 encoding of `wiener:51dc30ddc473d43a6011e9ebba6ca770`, and `51dc30ddc473d43a6011e9ebba6ca770` turns out to be the MD5 hash of "peter". So the cookie format is `BASE64(username:MD5(password))`:
 
-pic 4
+<img width="775" height="319" alt="4" src="https://github.com/user-attachments/assets/51c33b78-c9cf-4b1f-95c8-53a83bff3d65" />
+
 
 This cookie alone is enough to access `/my-account`:
 
-pic 5
+<img width="1058" height="400" alt="5" src="https://github.com/user-attachments/assets/e860a75d-951b-49c5-ab53-42cd1fb0e298" />
+
 
 A script was written to generate every possible cookie value for carlos's account, trying each candidate password:
 
@@ -51,7 +56,8 @@ for i in pwds:
         print(base64_message)
 ```
 
-pic 6
+<img width="448" height="220" alt="6" src="https://github.com/user-attachments/assets/9623e923-a76f-45ea-883e-44d2a5ffd88f" />
+
 
 ```
 Y2FybG9zOmUxMGFkYzM5NDliYTU5YWJiZTU2ZTA1N2YyMGY4ODNl
@@ -158,5 +164,7 @@ Y2FybG9zOjYzYjA0YTM3MTg0OTY5NGVmMzg2NDY4N2FkY2I0MTBh
 
 A different response comes back for `Y2FybG9zOmIzZThjZGQ5ZmY0NDI1OWZkNjdlODc5ZTU3OGNkOGY0`, which maps to the password "mobilemail":
 
-pic 7
-pic 8
+<img width="986" height="525" alt="7" src="https://github.com/user-attachments/assets/bbc2fca0-1e74-463a-bf24-67785060112e" />
+
+<img width="640" height="73" alt="8" src="https://github.com/user-attachments/assets/7e8a9383-30f5-4db9-a2a2-ac714a0c9b97" />
+
