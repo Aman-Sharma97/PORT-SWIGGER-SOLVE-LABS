@@ -49,8 +49,10 @@ This gives us the payload to test:
 	</stockCheck>
 ```
 
-pic 1
+<img width="928" height="448" alt="1" src="https://github.com/user-attachments/assets/fac052a6-401c-43aa-8684-483b0cc6b4c3" />
+
 
 This produces incoming requests in Burp Collaborator:
 
-pic 2
+<img width="891" height="99" alt="2" src="https://github.com/user-attachments/assets/3debc6f4-d74c-4cfc-a523-69a34b9e984a" />
+
