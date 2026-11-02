@@ -6,10 +6,7 @@ This lab is exploitable through server-side template injection because of how an
 
 ---
 
-**References:**
-- https://portswigger.net/web-security/server-side-template-injection/exploiting
-- https://www.trustedsec.com/blog/rubyerb-template-injection/
-- https://twitter.com/harshbothra_/status/1498324305872318464?lang=en
+
 
 <img width="768" height="453" alt="1" src="https://github.com/user-attachments/assets/6be3006f-3ddc-46ab-aa63-c9a1aa3b966c" />
 
