@@ -9,22 +9,27 @@ This lab enforces access control partly based on the HTTP method of the request.
 **Reference:**
 - https://portswigger.net/web-security/access-control
 
-pic 1
+<img width="762" height="189" alt="1" src="https://github.com/user-attachments/assets/b20da443-319f-4f5a-aa18-d4bd00a8472f" />
+
 
 ---
 
 The admin panel includes a feature for upgrading users:
 
-pic 2
+<img width="715" height="147" alt="2" src="https://github.com/user-attachments/assets/a04a4f01-b455-44a8-9be9-ae3aa6cd2f36" />
+
 
 This action is normally a POST request:
 
-pic 3
+<img width="742" height="484" alt="3" src="https://github.com/user-attachments/assets/a67c39a3-249c-4495-b0d9-210234e94007" />
+
 
 But it turns out to work just as well as a GET request:
 
-pic 4
+<img width="741" height="421" alt="4" src="https://github.com/user-attachments/assets/f42e3c9f-5a0c-4d2b-a58c-7a22b42c739e" />
+
 
 Running this as wiener successfully promotes the account to administrator:
 
-pic 5
+<img width="741" height="368" alt="5" src="https://github.com/user-attachments/assets/3da2b17c-66c5-467e-90a6-5aabd0db89a8" />
+
