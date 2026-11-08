@@ -13,7 +13,8 @@ Tip: Getting comfortable with handling JWTs in Burp Suite beforehand is recommen
 **Reference:**
 - https://portswigger.net/web-security/jwt
 
-pic 1
+<img width="771" height="779" alt="1" src="https://github.com/user-attachments/assets/72d2e96d-60fa-4dd9-b0bc-25342ea464f1" />
+
 
 ---
 
@@ -34,7 +35,8 @@ A JWT can be built in jwt.io by pointing `kid` at a known-empty file (so it effe
 }
 ```
 
-pic 2
+<img width="1071" height="570" alt="2" src="https://github.com/user-attachments/assets/cbe04053-448c-4973-aa7f-b0c579f9af38" />
+
 
 Resulting JWT:
 
@@ -49,4 +51,5 @@ Cookie: session=eyJraWQiOiIuLi8uLi8uLi9kZXYvbnVsbCIsImFsZyI6IkhTMjU2In0.eyJpc3Mi
 ...
 ```
 
-pic 3
+<img width="779" height="474" alt="3" src="https://github.com/user-attachments/assets/8be8b261-59d9-4ef4-8df9-faa581bfa915" />
+
