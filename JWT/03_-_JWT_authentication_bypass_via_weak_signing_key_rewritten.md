@@ -14,7 +14,8 @@ Tip: Getting comfortable with handling JWTs in Burp Suite beforehand is recommen
 - https://portswigger.net/web-security/jwt
 - https://raw.githubusercontent.com/wallarm/jwt-secrets/master/jwt.secrets.list
 
-pic 1
+<img width="767" height="842" alt="1" src="https://github.com/user-attachments/assets/bfa6aff7-60ba-43af-a782-3955dec476df" />
+
 
 ---
 
@@ -24,7 +25,8 @@ Logging in returns a signed JWT:
 eyJraWQiOiJiNzU4ZDZjOC01NTIzLTQ0YmQtOTgzYS1iMDlhZDA0YjBmOTciLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJwb3J0c3dpZ2dlciIsInN1YiI6IndpZW5lciIsImV4cCI6MTY4Mzc5MDMwNX0.ltkivPFm-8ecty4-ipdJS2BtN5aBoTxDQD7tYE2kujo
 ```
 
-pic 2
+<img width="533" height="392" alt="2" src="https://github.com/user-attachments/assets/da647c0e-be13-4fe8-b634-582edff4c90f" />
+
 
 Attempting to crack it:
 
@@ -32,15 +34,18 @@ Attempting to crack it:
 hashcat -a 0 -m 16500 "eyJraWQiOiJiNzU4ZDZjOC01NTIzLTQ0YmQtOTgzYS1iMDlhZDA0YjBmOTciLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJwb3J0c3dpZ2dlciIsInN1YiI6IndpZW5lciIsImV4cCI6MTY4Mzc5MDMwNX0.ltkivPFm-8ecty4-ipdJS2BtN5aBoTxDQD7tYE2kujo" jwt.secrets.list
 ```
 
-pic 3
+<img width="749" height="447" alt="3" src="https://github.com/user-attachments/assets/52cefa50-e2bb-4d92-a25d-41a8b84194af" />
+
 
 The cracked secret turns out to be "secret1":
 
-pic 4
+<img width="627" height="67" alt="4" src="https://github.com/user-attachments/assets/5469101d-b753-44f7-9e68-fb2f8526d3c4" />
+
 
 Not being too familiar with the JWT extension, I switched over to jwt.io instead:
 
-pic 5
+<img width="989" height="652" alt="5" src="https://github.com/user-attachments/assets/42f34fc8-b5d4-4cc4-a986-899ae14b1b51" />
+
 
 This produced the following signed JWT:
 
@@ -57,4 +62,5 @@ Cookie: session=eyJraWQiOiJiNzU4ZDZjOC01NTIzLTQ0YmQtOTgzYS1iMDlhZDA0YjBmOTciLCJh
 ...
 ```
 
-pic 6
+<img width="939" height="566" alt="6" src="https://github.com/user-attachments/assets/49b3e65c-f240-4419-b1ac-e6bd37faf966" />
+
