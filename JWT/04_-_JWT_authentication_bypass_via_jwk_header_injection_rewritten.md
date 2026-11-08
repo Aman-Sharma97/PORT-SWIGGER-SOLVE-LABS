@@ -13,21 +13,25 @@ Tip: Getting comfortable with handling JWTs in Burp Suite beforehand is recommen
 **Reference:**
 - https://portswigger.net/web-security/jwt
 
-pic 1
+<img width="645" height="864" alt="1" src="https://github.com/user-attachments/assets/9710ff5b-542f-43d4-9825-14affd016649" />
+
 
 ---
 
 Under "JWT Editor Keys," a new RSA key is generated:
 
-pic 2
+<img width="576" height="562" alt="2" src="https://github.com/user-attachments/assets/a4e934c0-5371-4899-aae6-313e0a2f59a5" />
+
 
 In Repeater's "JSON Web Token" tab, clicking "Attack" and then "Embedded JWK" applies the attack automatically:
 
-pic 3
+<img width="446" height="809" alt="3" src="https://github.com/user-attachments/assets/e9a18880-e359-4f56-b3ec-518bd0c911d7" />
+
 
 With that key embedded in the token, admin access is granted:
 
-pic 4
+<img width="894" height="776" alt="4" src="https://github.com/user-attachments/assets/8ed1c49e-38f8-45a1-b7d0-c9abe1036c47" />
+
 
 The target user can then be deleted:
 
